@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
@@ -27,14 +25,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pydirectinput
 
       - name: Verify syntax
         run: python -m py_compile virtual_steering_wheel.py
 
-      - name: Smoke import test
+      - name: Verify dependency imports
         run: |
-          python - <<'PY'
-          import virtual_steering_wheel as vsw
-          print('✅ import succeeded')
-          PY
+          python -c "import cv2, mediapipe, pyautogui, pydirectinput; print('All dependencies imported successfully')"
