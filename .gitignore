@@ -1,0 +1,38 @@
+# Python & virtualenv artefacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.dist-info/
+.env
+venv/
+
+# MediaPipe model (large binary) – handled by Git LFS
+hand_landmarker.task
+
+# IDE / editor files
+.vscode/
+.idea/
+*.suo
+*.swp
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Embedded Python & Installers (heavy binaries)
+python312-embed/
+*.exe
+*.zip
+get-pip.py
+
+# Local workspace caches
+.agents/
+.freebuff/
+
