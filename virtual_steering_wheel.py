@@ -544,7 +544,7 @@ print("  Hotkeys (in window):")
 print("    [M] Profile   [H] Swap Hands   [T] Steer Mode")
 print("    [N] Nitro      [C] Calibrate     [ESC] Quit")
 print("=" * 62)
-print("\n  Hold both hands steady for 1 second → auto-calibration...\n")
+print("\n  Hold both hands steady for 1 second -> auto-calibration...\n")
 
 webcam = WebcamCapture(src=0, width=640, height=480)
 start_time = time.time()
